@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mystery Box</title>
+</head>
+<body>
+
+    <h1>📦 Mystery Box Order</h1>
+
+    <form>
+        <label>Box Type:</label>
+        <select name="box">
+            <option>Gaming Box</option>
+            <option>Tech Box</option>
+            <option>Fashion Box</option>
+            <option>Book Box</option>
+        </select>
+        <br><br>
+
+        <label>Price:</label>
+        <input type="text" value="₹999" readonly>
+        <br><br>
+
+        <label>Quantity:</label>
+        <input type="number" name="quantity" min="1" max="5" value="1">
+        <br><br>
+
+        <p>Preferred Items:</p>
+        <input type="checkbox" name="items" value="Headphones"> Headphones
+        <input type="checkbox" name="items" value="Books"> Books
+        <input type="checkbox" name="items" value="Accessories"> Accessories
+        <input type="checkbox" name="items" value="Gadgets"> Gadgets
+        <br><br>
+
+        <label>Delivery Address:</label>
+        <br>
+        <textarea rows="4" cols="40" required></textarea>
+        <br><br>
+
+        <label>Special Instructions:</label>
+        <br>
+        <textarea rows="3" cols="40"></textarea>
+        <br><br>
+
+        <button type="submit">Place Mystery Order</button>
+    </form>
+
+</body>
+</html>

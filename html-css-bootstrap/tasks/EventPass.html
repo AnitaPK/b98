@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Pass</title>
+</head>
+<body>
+
+    <h1>🎟️ TechFest 2026</h1>
+
+    <img src="event.jpg" alt="Event Image" width="250">
+
+    <h2>Event Pass Registration</h2>
+
+    <form>
+        <label>Participant Name:</label>
+        <input type="text" name="name" required>
+        <br><br>
+
+        <label>Event Date:</label>
+        <input type="date" name="date">
+        <br><br>
+
+        <label>Venue:</label>
+        <input type="text" value="City Convention Center" readonly>
+        <br><br>
+
+        <label>Pass Type:</label>
+        <br>
+        <input type="radio" name="pass" value="Regular"> Regular
+        <input type="radio" name="pass" value="VIP"> VIP
+        <br><br>
+
+        <label>Meal Preference:</label>
+        <br>
+        <input type="checkbox" name="meal" value="Veg"> Veg
+        <input type="checkbox" name="meal" value="NonVeg"> Non-Veg
+        <input type="checkbox" name="meal" value="Jain"> Jain
+        <br><br>
+
+        <label>Contact Number:</label>
+        <input type="tel" name="phone">
+        <br><br>
+
+        <button type="submit">Generate Pass</button>
+    </form>
+
+</body>
+</html>

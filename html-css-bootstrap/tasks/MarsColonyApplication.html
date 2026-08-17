@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mars Colony Application</title>
+</head>
+<body>
+
+    <h1>🚀 Mars Colony Application</h1>
+
+    <form>
+        <label>Name:</label>
+        <input type="text" name="name" required>
+        <br><br>
+
+        <label>Age:</label>
+        <input type="number" name="age" min="18" max="60" required>
+        <br><br>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+        <br><br>
+
+        <label>Skills:</label>
+        <br>
+        <input type="checkbox" name="skill" value="Programming"> Programming
+        <input type="checkbox" name="skill" value="Medical"> Medical
+        <input type="checkbox" name="skill" value="Engineering"> Engineering
+        <input type="checkbox" name="skill" value="Science"> Science
+        <br><br>
+
+        <label>Preferred Colony Role:</label>
+        <select name="role">
+            <option>Engineer</option>
+            <option>Scientist</option>
+            <option>Doctor</option>
+            <option>Programmer</option>
+            <option>Commander</option>
+        </select>
+        <br><br>
+
+        <label>Experience:</label>
+        <input type="number" name="experience" min="0" max="40">
+        <label> years</label>
+        <br><br>
+
+        <label>Why should you be selected?</label>
+        <br>
+        <textarea rows="5" cols="40"></textarea>
+        <br><br>
+
+        <button type="submit">Apply for Mars Colony</button>
+    </form>
+
+</body>
+</html>
