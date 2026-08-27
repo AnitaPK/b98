@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        background-color: pink;
+    }
+    .headerOne{
+        font-size: 78px;
+    }
+    .imgSample{
+        width: 90%;
+        height: 400px;
+
+    }
+    .containerCard{
+        display: flex;
+        gap:10px;
+        /* flex-wrap: wrap; */
+        justify-content: space-around;
+    }
+    .card{
+        width: 16rem;
+        height: 440px;
+        box-shadow: 2px 2px 2px 2px gray;
+    }
+    .card img{
+        width: 100%;
+    }
+    .tableInfo{
+        height: 400px;
+        width: 700px;
+        /* overflow: hidden; */
+        overflow-y: scroll;
+    }
+    /* .tableInfo:hover{
+        overflow: visible;
+    } */
+     table{
+        width: 700px;
+     }
+    table, th, td{
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th{
+        text-align: left;
+        background-color: red;
+    }
+    tr{
+        background-color: azure;
+    }
+    tr:nth-child(5){
+        background-color: aqua;
+    }
+    td.textCenter{
+        text-align: center;
+    }
+    .loginForm{
+        width: 700px;
+        height: 500px;
+        background-image: linear-gradient(rgb(255, 218, 149), rgb(255, 255, 157));
+    }
+    .formControls{
+        /* margin: 20px; */
+        padding: 20px;
+    }
+    label{
+        color:red;
+    }
+    input{}
+    .maditory{
+        color: red;
+    }
+    input[type="email"], input[type="password"]{
+        background-color: pink;
+        padding: 4px;
+        border: none;
+        border-radius: 10px;
+    }
+    input:focus{
+        background-color: red;
+        color: white;
+        border-radius: 3px;
+    }
+    .Amar > p{
+        color: blue;
+    }
+
+    #divExp{
+        background-color: purple;
+    }
+    .formatQuotes{
+        background-color: green !important;
+    }
+    .formatQuotes::first-letter{
+        font-size: 100px;
+    }
+    /* .formatQuotes::before,  .formatQuotes::after{
+        content: "'";
+        color: brown;
+        font-size: 30px;
+    } */
+    /* .formatQuotes::after{
+        content: '"';
+        color: brown;
+        font-size: 30px;
+    } */
+
+    .formatQuotes::first-line{
+        text-decoration: underline;
+    }
+
+    @media screen and (min-width:451px ) and (max-width:750px ){
+        body{
+            background-color: red;
+        }
+        .headerOne{
+        font-size: 48px;
+        }
+        table, .tableInfo{
+            width: 100%;
+        }
+    .containerCard{
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+    }}
+
+    @media screen and (max-width:450px){
+        body{
+            background-color: rgb(255, 239, 242);
+        }
+        .headerOne{
+            font-size: 20px;
+        }
+        .imgSample{
+            height: 200px;
+        }
+            .containerCard{
+        flex-direction: column;
+    }
+    .tableInfo{
+        width: 100%;
+        overflow-x: scroll;
+    }
+    }
+
+  </style>
+</head>
+<body >
+    <div class="formatQuotes" id="divExp"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias enim odit </div>
+    <div class="Amar">
+        <p>ParaOne</p>
+        <p>ParaTwo</p>
+        <div>
+            <p>Para grandChild</p>
+        </div>
+        <p>ParaThree</p>
+    </div>
+
+    <div class="loginForm">
+    <form action="">
+        <div class="formControls">
+        <label for="">Email <sup class="maditory">*</sup>: </label>
+        <input type="email" name="" id="" required>
+        </div>
+        <div class="formControls">
+        <label for="">Password <sup class="maditory">*</sup>:</label>
+        <input type="password" name="" id="">
+        </div>
+        <div class="formControls">
+        <input type="checkbox" name="" id="">
+        <span>Accept <a href="#">Rules and Regulation</a></span>
+        </div>
+        <div class="formControls">
+            <input type="submit" value="LOGIN">
+        </div>
+    </form>
+    </div>
+    <div class="tableInfo">
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Rating</th>
+                <th>Profit</th>
+                <th>Review</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pushpa The fire</td>
+                <td class="textCenter">4.9</td>
+                <td>Rs. 500 Crore</td>
+                <td>Awesome movie with ACtions</td>
+            </tr>
+                 <tr>
+                <td>Dhurandhar</td>
+                <td class="textCenter">5</td>
+                <td>Rs. 500 Crore</td>
+                <td>Awesome movie with ACtions</td>
+            </tr>
+                 <tr>
+                <td>Geeta Gonvindam</td>
+                <td class="textCenter">2.9</td>
+                <td>Rs. 100 Crore</td>
+                <td>Awesome movie</td>
+            </tr>
+                 <tr>
+                <td>Shiddat</td>
+                <td class="textCenter">0.9</td>
+                <td>Rs. 5 Crore</td>
+                <td>Awesome movie</td>
+            </tr>
+            <tr>
+                <td>Geeta Gonvindam</td>
+                <td class="textCenter">2.9</td>
+                <td>Rs. 100 Crore</td>
+                <td>Awesome movie</td>
+            </tr>
+                 <tr>
+                <td>Shiddat</td>
+                <td class="textCenter">0.9</td>
+                <td>Rs. 5 Crore</td>
+                <td>Awesome movie</td>
+            </tr><tr>
+                <td>Geeta Gonvindam</td>
+                <td class="textCenter">2.9</td>
+                <td>Rs. 100 Crore</td>
+                <td>Awesome movie</td>
+            </tr>
+                 <tr>
+                <td>Shiddat</td>
+                <td class="textCenter">0.9</td>
+                <td>Rs. 5 Crore</td>
+                <td>Awesome movie</td>
+            </tr><tr>
+                <td>Geeta Gonvindam</td>
+                <td class="textCenter">2.9</td>
+                <td>Rs. 100 Crore</td>
+                <td>Awesome movie</td>
+            </tr>
+                 <tr>
+                <td>Shiddat</td>
+                <td class="textCenter">0.9</td>
+                <td>Rs. 5 Crore</td>
+                <td>Awesome movie</td>
+            </tr><tr>
+                <td>Geeta Gonvindam</td>
+                <td class="textCenter">2.9</td>
+                <td>Rs. 100 Crore</td>
+                <td>Awesome movie</td>
+            </tr>
+                 <tr>
+                <td>Shiddat</td>
+                <td class="textCenter">0.9</td>
+                <td>Rs. 5 Crore</td>
+                <td>Awesome movie</td>
+            </tr><tr>
+                <td>Geeta Gonvindam</td>
+                <td class="textCenter">2.9</td>
+                <td>Rs. 100 Crore</td>
+                <td>Awesome movie</td>
+            </tr>
+                 <tr>
+                <td>Shiddat</td>
+                <td class="textCenter">0.9</td>
+                <td>Rs. 5 Crore</td>
+                <td>Awesome movie</td>
+            </tr><tr>
+                <td>Geeta Gonvindam</td>
+                <td class="textCenter">2.9</td>
+                <td>Rs. 100 Crore</td>
+                <td>Awesome movie</td>
+            </tr>
+                 <tr>
+                <td>Shiddat</td>
+                <td class="textCenter">0.9</td>
+                <td>Rs. 5 Crore</td>
+                <td>Awesome movie</td>
+            </tr><tr>
+                <td>Geeta Gonvindam</td>
+                <td class="textCenter">2.9</td>
+                <td>Rs. 100 Crore</td>
+                <td>Awesome movie</td>
+            </tr>
+                 <tr>
+                <td>Shiddat</td>
+                <td class="textCenter">0.9</td>
+                <td>Rs. 5 Crore</td>
+                <td>Awesome movie</td>
+            </tr><tr>
+                <td>Geeta Gonvindam</td>
+                <td class="textCenter">2.9</td>
+                <td>Rs. 100 Crore</td>
+                <td>Awesome movie</td>
+            </tr>
+                 <tr>
+                <td>Shiddat</td>
+                <td class="textCenter">0.9</td>
+                <td>Rs. 5 Crore</td>
+                <td>Awesome movie</td>
+            </tr><tr>
+                <td>Geeta Gonvindam</td>
+                <td class="textCenter">2.9</td>
+                <td>Rs. 100 Crore</td>
+                <td>Awesome movie</td>
+            </tr>
+                 <tr>
+                <td>Shiddat</td>
+                <td class="textCenter">0.9</td>
+                <td>Rs. 5 Crore</td>
+                <td>Awesome movie</td>
+            </tr>
+                 <tr>
+                <td>Bhahubali</td>
+                <td class="textCenter">4.9</td>
+                <td>Rs. 500 Crore</td>
+                <td>Awesome movie with ACtions</td>
+            </tr>
+                 <tr>
+                <td>Raje Shivaji</td>
+                <td class="textCenter">4.9</td>
+                <td>Rs. 500 Crore</td>
+                <td>Awesome movie with ACtions</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <h1 id="headerOne" class="headerOne">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem?</h1>
+        <img src="./assests/w-logo.png" alt="" class="imgSample">
+    <div class="containerCard">
+        <div class="card">
+            <img src="./assests/w-logo.png" alt="">
+            <h3>Product One</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <button>Buy Now</button>
+        </div>
+        <div class="card">
+            <img src="./assests/w-logo.png" alt="">
+            <h3>Product Two</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <button>Buy Now</button>
+        </div><div class="card">
+            <img src="./assests/w-logo.png" alt="">
+            <h3>Product Three</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <button>Buy Now</button>
+        </div><div class="card">
+            <img src="./assests/w-logo.png" alt="">
+            <h3>Product Four</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <button>Buy Now</button>
+        </div><div class="card">
+            <img src="./assests/w-logo.png" alt="">
+            <h3>Product One</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <button>Buy Now</button>
+        </div><div class="card">
+            <img src="./assests/w-logo.png" alt="">
+            <h3>Product One</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <button>Buy Now</button>
+        </div><div class="card">
+            <img src="./assests/w-logo.png" alt="">
+            <h3>Product One</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <button>Buy Now</button>
+        </div>
+    </div>
+</body>
+</html>

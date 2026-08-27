@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        }
+
+        .scaleBox:hover {
+            transform: scale(0.5, 0.5);
+        }
+
+        .roatateBox:hover {
+            transform: rotateY(60deg);
+        }
+
+        .skewBox {
+            transform: skew(60deg);
+        }
+
+        .translateBox {
+            transform: translate(50px, 50px);
+        }
+
+        .BoxTwo {
+            width: 100px;
+            height: 50px;
+            background-color: pink;
+            font-size: 15px;
+            transition: background-color 4s 10s, font-size 3s 10s, color 7s 10s, transform 5s 10s;
+        /* transition: all 4s 10s */
+        }   
+
+        .BoxTwo:hover {
+            background-color: rgb(108, 123, 254);
+            font-size: 50px;
+            color: white;
+            transform: translateX(500px);
+        }
+        .boxThree{
+            width: 100px;
+            height: 50px;
+            background-color: purple;
+            /* animation-name: animationOne;
+            animation-duration: 6s;
+            animation-iteration-count: infinite; */
+            animation: animationOne 3s 5s ease infinite; 
+        }
+        @keyframes animationOne{
+            0%{
+                background-color: purple;
+                font-size: 20px;
+                color: white;
+                transform: rotateY(60deg);
+            }
+            20%{
+                transform: rotateX(-60deg);
+            }
+            50%{
+                background-color: aqua;
+                font-size: 40px;
+                color: brown;
+                /* transform: rotateY(120deg); */
+            }
+            100%{
+                background-color: green;
+                font-size: 20px;
+                color:bisque;
+            }
+        }
+        .heartBlink{
+            color: rgb(255, 0, 0);
+            font-size: 50px;
+            animation:heartTwo 1s infinite;
+
+        }
+        @keyframes heartTwo{
+            0%, 100% {
+    opacity: 0.2;
+    transform: rotate(-45deg) scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(-45deg) scale(1.05);
+  }
+        }
+        @keyframes heartBlinkOne{
+            0%{
+                /* font-size: 20px; */
+                transform: scale(1,1);
+            }
+            25%{
+                transform: scale(0.5,0.5);
+            }
+            50%{
+                /* font-size: 100px; */
+                transform: scale(5,5);
+            }
+            75%{
+                transform: scale(0.5,0.5);
+            }
+            100%{
+                /* font-size: 20px; */
+                transform: scale(1,1);
+
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <h3>Animation</h3>
+    <div class="heartBlink">
+        <i class="fa-solid fa-heart"></i>
+    </div>
+    <div style="height: 600px;"></div>
+    <div class="boxThree">ROHAN</div>
+    <h3>Transition </h3>
+    <div class="BoxTwo">CSS</div>
+    <h3>transform property</h3>
+    <div class="box"></div>
+    <div class="box scaleBox"></div>
+    <div class="box roatateBox"></div>
+    <div class="box skewBox"></div>
+    <div class="box translateBox"></div>
+
+
+</body>
+
+</html>
