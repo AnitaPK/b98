@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .layoutOne{
+            height: 700px;
+            background-color: pink;
+            display: grid;
+            grid-template-areas:  'navOne navOne navOne navOne'
+                                  'hOne hOne hOne hOne' 
+                                  'asidOne conOne conOne conOne'
+                                  'asidOne fooOne fooOne fooOne';
+
+        }
+        .NavbarOne{
+            height: 90px;
+            background-color: rgb(255, 134, 134);
+            grid-area: navOne;
+        }
+        .headerOne{
+            height: 200px;
+            background-color: red;
+            grid-area: hOne;
+            
+        }
+        .asideOne{
+            height: 500px;
+            background-color: rgb(214, 214, 214);
+            grid-area: asidOne;
+        }
+        .contentOne{
+            height: 450px;
+            background-color: black;
+            grid-area: conOne;
+        }
+        .footerOne{
+            height: 50px;
+            background-color: gray;
+            grid-area: fooOne;
+        }
+    </style>
+</head>
+<body>
+    <div class="layoutOne">
+        <div class="NavbarOne"></div>
+        <div class="headerOne"></div>
+        <div class="asideOne"></div>
+        <div class="contentOne"></div>
+        <div class="footerOne"></div>
+    </div>
+</body>
+</html>

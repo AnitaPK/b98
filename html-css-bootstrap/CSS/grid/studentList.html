@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .studCard{
+            background-color: rgb(85, 227, 255);
+            width: 18rem;
+            padding: 20px;
+            box-shadow: 1px 1px 2px 1px rgb(0, 238, 255);
+        }
+        .studentsContainer{
+            width: 80%;
+            margin: 10px auto;
+            display: grid;
+            grid-template-rows: 200px 200px 200px;
+            grid-template-columns: repeat(3, 1fr);
+            gap:20px
+        }
+        .fruitContainer{
+            /* width: 700px; */
+            height: 700px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 2fr;
+            grid-template-rows: 200px 250px 250px;
+            gap:5px;
+        }
+        .grapes{
+            /* height: 100px; */
+            /* width: 100px; */
+            background-color: rgb(149, 255, 29);
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        .blueBerries{
+              /* height: 100px; */
+            /* width: 100px; */
+            background-color: rgb(10, 23, 55);
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        .watermelon{
+            /* height: 100px; */
+            /* width: 100px; */
+            background-color: rgb(255, 29, 29);
+             grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+        .orange{
+              /* height: 100px; */
+            /* width: 100px; */
+            background-color: rgb(255, 146, 29);
+             grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+        .papaya{
+              /* height: 100px; */
+            /* width: 100px; */
+            background-color: rgb(255, 225, 29);
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+        .pinnaple{
+              /* height: 100px; */
+            /* width: 100px; */
+            background-color: rgb(78, 29, 6);
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+        @media screen and (max-width:650px) and (min-width:350px){
+            .studentsContainer{
+            grid-template-rows: 200px 200px 200px;
+            grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media screen  and (max-width:350px){
+            .studentsContainer{
+            /* grid-template-rows: 200px 200px 200px; */
+            grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="fruitContainer">
+        <div class="grapes"></div>
+        <div class="blueBerries"></div>
+        <div class="watermelon"></div>
+        <div class="orange"></div>
+        <div class="papaya"></div>
+        <div class="pinnaple"></div>
+    </div>
+    <h2>Student List</h2>
+    <div class="studentsContainer">
+        <div class="studCard">
+            <h3>Baadshah</h3>
+            <h4>0001</h4>
+            <button>Get More</button>
+        </div>
+        <div class="studCard">
+            <h3>Gabbar</h3>
+            <h4>0002</h4>
+            <button>Get More</button>
+        </div>
+        <div class="studCard">
+            <h3>Mongambo</h3>
+            <h4>0003</h4>
+            <button>Get More</button>
+        </div>
+        <div class="studCard">
+            <h3>Raavan</h3>
+            <h4>0004</h4>
+            <button>Get More</button>
+        </div>
+        <div class="studCard">
+            <h3>Kadiya</h3>
+            <h4>0005</h4>
+            <button>Get More</button>
+        </div>
+        <div class="studCard">
+            <h3>Raavan</h3>
+            <h4>0004</h4>
+            <button>Get More</button>
+        </div>
+        <div class="studCard">
+            <h3>Kadiya</h3>
+            <h4>0005</h4>
+            <button>Get More</button>
+        </div>
+        <div class="studCard">
+            <h3>Raavan</h3>
+            <h4>0004</h4>
+            <button>Get More</button>
+        </div>
+        <div class="studCard">
+            <h3>Kadiya</h3>
+            <h4>0005</h4>
+            <button>Get More</button>
+        </div>
+
+    </div>
+</body>
+</html>
