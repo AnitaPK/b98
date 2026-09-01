@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.WideProperty{
+    width: 80%;
+    margin: 20px auto;
+    background-color: rgb(240, 240, 240);
+    display: grid;
+    gap:10px
+}
+.diningImg{
+    grid-row-start: 1;
+    grid-row-end:5;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.diningImgClass{
+    border-radius: 50px 0 0 50px;
+    width:400px;
+    height: 500px
+    ;
+}
+.stairsImg1{
+    grid-row-start: 1;
+    grid-row-end:2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.stairCaseImg{
+    width: 300px;
+}
+.TextSec{
+    grid-row-start: 1;
+    grid-row-end:2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.Bathtub{
+    grid-row-start: 2;
+    grid-row-end:4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.bathTubImg{
+    width: 300px;
+    height: 300px;
+}
+.stairsImg2{
+        grid-row-start: 2;
+    grid-row-end:3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.stairsImg3{
+    grid-row-start: 3;
+    grid-row-end:4;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
