@@ -1,7 +1,9 @@
 :root{
     --infoColor : #0dcaf0;
 }
-
+*{
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif !important;
+}
 .customNavLink{
     background-color: white;
     border: 0;
