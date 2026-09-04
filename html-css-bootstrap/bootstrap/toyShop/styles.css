@@ -1,5 +1,6 @@
 :root{
     --infoColor : #0dcaf0;
+    --grayColor : #9a9a9a;
 }
 *{
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif !important;
@@ -24,3 +25,59 @@
 .customNotifyCount{
     font-size: 10px!important;
 }
+
+.customForCustomer{}
+.boxDetails{
+    display: flex;
+}
+.customCareIcon i{
+    font-size: 40px;
+    padding-right: 5px;
+}
+.customCareContent p{
+    font-size: 15px;
+    color: var(--grayColor);
+}
+.customTwoImgSection {}
+.Airplane{
+    background-color: rgb(255, 187, 187);
+    display: flex;
+    overflow: hidden;
+
+}
+.animationForText{}
+.animationForImg{
+
+}
+.animationForImg img{
+ mix-blend-mode:multiply;
+ /* background-color: transparent; */
+width: 250px;
+height: 250px;
+}
+.animal{
+    background-color: rgb(203, 236, 254);
+    display: flex;
+    overflow: hidden;
+
+}
+.animationForText h3{
+    width: 60%;
+    font-size: 40px;
+    font-weight: 700;
+}
+.animationForText{
+    transition: transform 2s;
+    padding: 30px 15px;
+}
+.Airplane:hover .animationForText, .animal:hover .animationForText{
+   transform: translateY(-10px); 
+}
+.Airplane img, .animal img{
+    transition: transform 2s;
+}
+
+.Airplane:hover img, .animal:hover img{
+    transform: scale(1.3,1.3);
+}
+
