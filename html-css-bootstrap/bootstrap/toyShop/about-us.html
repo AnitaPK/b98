@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About page</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body>
+    card table
+       <div>
+        <!-- first navbar  -->
+        <div class="container d-flex justify-content-between firstNav p-2">
+            <div class="leftFisrtNav">
+                <p>Welcome you to ToyShop!</p>
+            </div>
+            <div class="rightFirstNav">
+                <div class="d-flex">
+                    <button class="customNavLink" data-bs-toggle="modal" data-bs-target="#loginModal">Sign In /
+                        Join</button>
+                    <div class="dropdown">
+                        <button class=" dropdown-toggle customNavLink" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            USA $
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">EUR</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <li><a class="dropdown-item" href="#">USD</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="customNavLink dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            ENGLISH
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">English</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <li><a class="dropdown-item" href="#">FRANCIES</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!-- second navbar  -->
+        <div class="secondNavbar container d-flex justify-content-between">
+            <!-- logo img  -->
+            <div>
+                <a href="#">
+                    <img src="https://demo-59.woovinapro.com/wp-content/uploads/2022/02/logo.png" alt="" class=""
+                        width="200" height="50">
+                </a>
+            </div>
+
+            <!-- search input  -->
+            <div class="input-group mb-3 w-50">
+                <input type="text" class="form-control" placeholder="Recipient’s username"
+                    aria-label="Recipient’s username" aria-describedby="button-addon2">
+                <button class="btn btn-outline-dark customInfoBTN" type="button" id="button-addon2">Button</button>
+            </div>
+
+            <!-- icons  -->
+            <div class="iconsNavbar">
+                <span class="pe-4">
+                    <i class="fa-solid fa-shuffle  position-relative ">
+                        <span
+                            class="position-absolute top-100 start-100 translate-middle  badge rounded-pill text-bg-info text-white customNotifyCount">0</span>
+                    </i>
+                </span>
+                <span class="pe-4">
+
+                    <i class="fa-regular fa-heart position-relative">
+                        <span
+                            class="position-absolute top-100 start-100 translate-middle  badge rounded-pill text-bg-info text-white customNotifyCount">0</span>
+
+                    </i>
+                </span>
+                <span class="pe-4">
+
+                    <i class="fa-solid fa-bag-shopping position-relative">
+                        <span
+                            class="position-absolute top-100 start-100 translate-middle  badge rounded-pill text-bg-info text-white customNotifyCount">0</span>
+
+                    </i>
+                </span>
+                <span>$ 0.00</span>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg bg-info">
+        <div class="container">
+            <a class="navbar-brand" href="#">Toy shop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">Contact Us</a>
+                    </li>
+                       <li class="nav-item">
+                        <a class="nav-link active active" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+<!-- nav tab  -->
+<div class="container">
+<div class="d-flex align-items-start">
+  <div class="nav flex-column nav-pills me-3" style="width: 160px;" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+    <button class="nav-link active" id="v-pills-about-shop-tab" data-bs-toggle="pill" data-bs-target="#v-pills-about-shop" type="button" role="tab" aria-controls="v-pills-about-shop" aria-selected="true">About Shop</button>
+    <button class="nav-link" id="v-pills-gallery-tab" data-bs-toggle="pill" data-bs-target="#v-pills-gallery" type="button" role="tab" aria-controls="v-pills-gallery" aria-selected="false">Gallery</button>
+    <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</button>
+    <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</button>
+  </div>
+  <div class="tab-content" id="v-pills-tabContent">
+    <div class="tab-pane fade show active" id="v-pills-about-shop" role="tabpanel" aria-labelledby="v-pills-about-shop-tab" tabindex="0">
+        <div class="container">
+            <div class="row">
+                <div class="col">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid eius velit magnam obcaecati, provident aperiam, consequuntur accusantium, debitis unde amet at modi sapiente quam. Voluptatibus dicta iusto nihil minus facere.</div>
+                <div class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ut repellat provident harum itaque beatae accusantium tempore quasi, rem laudantium.</div>
+                <div class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eum dignissimos hic sint magni distinctio deserunt laborum quia, error eaque totam iste optio enim quaerat maiores asperiores mollitia sit nostrum?</div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="v-pills-gallery" role="tabpanel" aria-labelledby="v-pills-gallery-tab" tabindex="0">
+        <img src="./assets/toyImg2Animal.jpeg" alt="">
+    </div>
+    <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab" tabindex="0">...</div>
+    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">...</div>
+    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">...</div>
+  </div>
+</div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  
+
+
+
+</body>
+</html>
+
+
+
+
