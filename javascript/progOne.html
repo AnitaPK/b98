@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        Input 
+        1. input tags 
+        2. prompt()
+    </pre>
+    <h2 id="email"></h2>
+    deep copy and shallow copy in js
+    <script>
+        email =prompt("Enter your email address ")
+        document.getElementById("email").textContent = email
+        age = 20
+        students = ["Amar","Rohan"]
+        console.log(email)
+
+    </script>
+
+    <input type="text"  id="userName" value="Rohan">
+    <button onclick="showGreet()">Get User Name and Greet</button>
+    <div id="greetMSG"></div>
+    <script>
+        function showGreet(){
+       console.log(document.getElementById("userName").value)
+       document.getElementById("greetMSG").textContent = "Welcome " + document.getElementById("userName").value
+        }
+    </script>
+    <pre>
+        Output =>
+      1.  console.log(). help for developers for debugging
+      2.   alert()
+      3. document.write()  help for developers for debugging
+      4. document.getElementById("ID")
+    </pre>
+    <button onclick="digVijay()">Click me for MAGIC</button>
+
+<h1>Welcome to our website <b id="userName"></b></h1>
+<p id="para">I know HTML and CSS very Well</p>
+<button onclick="document.getElementById('para').textContent = 'Learn Javascript'">Whats next</button>
+    <script>
+        console.log("Hello World")
+        // console.log("This is comment")
+        /* 
+        comment in js
+
+        */
+    </script>
+    <noscript>
+        like comment
+    </noscript>
+    <script>
+        console.log("Hello second time")
+    </script>
+    <script src="./progOne.js"></script>
+</body>
+</html>

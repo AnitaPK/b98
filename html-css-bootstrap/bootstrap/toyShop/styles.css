@@ -5,6 +5,9 @@
 *{
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif !important;
 }
+i{
+    font-family: "Font Awesome 6 Free" !important;
+}
 .customNavLink{
     background-color: white;
     border: 0;
@@ -20,6 +23,7 @@
     background-color: black !important;
 }
 .iconsNavbar i{
+    font-family: "Font Awesome 6 Free" !important;
     font-size: 20px;
 }
 .customNotifyCount{
