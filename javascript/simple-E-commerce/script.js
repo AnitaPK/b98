@@ -10,6 +10,8 @@ const PriceElmt = document.querySelector("#Price")
 const StockElmt = document.querySelector("#Stock")
 const addNewBtnElmt = document.querySelector("#addNewBtn")
 
+editProductID = null
+
 function saveToLocal(p) {
     localStorage.setItem("B98", JSON.stringify(p))
 }
@@ -17,7 +19,8 @@ function getFromLocal() {
     return JSON.parse(localStorage.getItem("B98"))
 }
 
-function renderProducts(prod) {
+function renderProducts() {
+    const prod = getFromLocal()
     productListElmt.innerHTML = prod.map((product, i) => `
             <div class="col-12 col-md-6 col-lg-3">
                 <div class="card text-bg-info " style="width: 18rem;">
@@ -26,7 +29,7 @@ function renderProducts(prod) {
     <h6 class="card-subtitle mb-2 text-body-secondary">${product.category}</h6>
     <p>Price : $ ${product.price}</p>
     <p>Stock : ${product.stock} </p>
-    <button class="btn btn-primary">Edit</button>
+    <button class="btn btn-primary" onclick=editProduct(${product.id})>Edit</button>
     <button class="btn btn-primary" onclick=deleteProd(${product.id})>Delete</button>
   </div>
 </div>  
@@ -34,21 +37,39 @@ function renderProducts(prod) {
 `).join('')
 }
 function AddNewProduct() {
-    newProductObj = {
-        id: Date.now(),
-        name: NameElmt.value,
-        category: CategoryElmt.value,
-        price: PriceElmt.value,
-        stock: StockElmt.value
+        prodsFromLocal = getFromLocal()
+
+    if (editProductID == null) {
+        newProductObj = {
+            id: Date.now(),
+            name: NameElmt.value,
+            category: CategoryElmt.value,
+            price: PriceElmt.value,
+            stock: StockElmt.value
+        }
+        // console.log(newProductObj)
+        prodsFromLocal.push(newProductObj)
+        // console.log(prodsFromLocal)
+       
+    } else {
+        IndexProd = productFromLocal.findIndex((p) => p.id == editProductID)
+        // console.log(IndexProd)
+        // console.log(NameElmt.value, CategoryElmt.value, PriceElmt.value, StockElmt.value)
+
+        prodsFromLocal[IndexProd].name = NameElmt.value
+        prodsFromLocal[IndexProd].category = CategoryElmt.value
+        prodsFromLocal[IndexProd].price = PriceElmt.value
+        prodsFromLocal[IndexProd].stock = StockElmt.value
+
     }
-    prodsFromLocal = getFromLocal()
-    prodsFromLocal.push(newProductObj)
-    renderProducts(prodsFromLocal)
-    saveToLocal(prodsFromLocal)
-    NameElmt.value = ''
-    CategoryElmt.value = ''
-    PriceElmt.value = ''
-    StockElmt.value = ''
+        saveToLocal(prodsFromLocal)
+        renderProducts(prodsFromLocal)
+
+
+        NameElmt.value = ''
+        CategoryElmt.value = ''
+        PriceElmt.value = ''
+        StockElmt.value = ''
 }
 addNewBtnElmt.addEventListener("click", AddNewProduct)
 
@@ -64,17 +85,38 @@ function deleteProd(ID) {
     }
 }
 
+function editProduct(ID) {
+    productFromLocal = getFromLocal()
+    IndexProd = productFromLocal.findIndex((p) => p.id == ID)
+    if (IndexProd == -1) {
+        alert("Product not found")
+    } else {
+
+        editProductID = ID
+        addNewBtnElmt.textContent = "Update Product"
+
+        prodsFromLocal = getFromLocal()
+        productForUpdate = prodsFromLocal.find((p) => p.id == editProductID)
+
+        NameElmt.value = productForUpdate.name
+        CategoryElmt.value = productForUpdate.category
+        PriceElmt.value = productForUpdate.price
+        StockElmt.value = productForUpdate.stock
+
+    }
+}
+
 window.addEventListener('load', () => {
-    savedToLocal = JSON.parse(localStorage.getItem("B98"))
-    if (savedToLocal.length > 0) {
+    let savedToLocal = getFromLocal()
+    if (savedToLocal == null || savedToLocal.length >= 0) {
         renderProducts(savedToLocal)
     } else {
-        localStorage.setItem("B98", JSON.stringify(products))
+        saveToLocal(products)
         renderProducts(products)
     }
 })
 
-
+// saveToLocal(products)
 
 // quote = "Dont be busy. Be productive"
 // localStorage.setItem("b98",quote)
