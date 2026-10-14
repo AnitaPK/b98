@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+
+        }
+        .borderOne{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1>A heading</h1>
+    <a href="">Go to website</a>
+    <pre>
+        1. document.getElementById('id')
+        2. document.getElementsByClassName('class')
+        3. document.getElementsByTagName('tag') 
+    </pre>
+
+    <h1>Learning DOME</h1>
+    <h1 id="demoOld" class="borderOne">Old methods</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique itaque dolorem nisi quibusdam! Aliquid accusamus minima ad unde eos nostrum!</p>
+
+    <div class="borderOne">
+        <p class="borderOne" id="paraOne">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, nam!</p>
+        <p id="paraTwo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, consectetur!</p>
+    </div>
+<ul id="lists"></ul>
+
+<script>
+    document.querySelector('#lists').innerHTML = `
+    <li >APPLE</li>
+    <li>BANANA</li>
+    `
+</script>
+
+    <p class="info">This is the first paragraph with information.</p>
+    <p class="info">This is the second paragraph containing more details.</p>
+    <p class="info">This is the third paragraph for testing the highlight.</p>
+    <p class="info">This is the fourth paragraph with some sample text.</p>
+    <p class="info">This is the fifth paragraph at the end of the list.</p>
+
+    <button id="highlightBtn">Highlight Paragraphs</button>
+
+    <script>
+        document.getElementById('highlightBtn').addEventListener('click', function() {
+            // Select all elements with the class name "info"
+            const paragraphs = document.getElementsByClassName('info');
+            
+            // Loop through the HTMLCollection using a standard for loop
+            for (let i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].style.color = 'blue';
+                paragraphs[i].style.backgroundColor = 'lightyellow';
+            }
+        });
+    </script>
+
+<ul>
+    <li>C</li>
+    <li>C++</li>
+    <li>Java</li>
+    <li>Javascript</li>
+    <li>Python</li>
+</ul>
+    <button id="programmingBtn">Update Programming</button>
+
+    <script>
+        document.getElementById('programmingBtn').addEventListener('click', function() {
+            // Select all elements with the class name "info"
+            const listsProgs = document.getElementsByTagName('li');
+            
+            // Loop through the HTMLCollection using a standard for loop
+            for (let i = 0; i < listsProgs.length; i++) {
+                listsProgs[i].textContent = 'Language Updated';
+            }
+        });
+    </script>
+
+
+<div class="card">11111</div>
+<div class="card">22222</div>
+<div class="card">33333</div>
+<div class="card">4444</div>
+<div class="card">5555</div>
+<div class="card">6666</div>
+
+<button id="updateCards">Update All Cards.</button>
+<script>
+    document.getElementById("updateCards").addEventListener('click',()=>{
+        cards = document.querySelectorAll(".card")
+        cards.forEach(d => {
+             d.textContent = "JavaScript DOM Card"
+        });
+    })
+</script>
+    <script>
+        /*
+        document.getElementsByClassName('borderOne')
+HTMLCollection(3) [h1#demoOld.borderOne, div.borderOne, p#paraOne.borderOne, demoOld: h1#demoOld.borderOne, paraOne: p#paraOne.borderOne]
+document.getElementsByTagName('p')
+HTMLCollection(3) [p, p#paraOne.borderOne, p#paraTwo, paraOne: p#paraOne.borderOne, paraTwo: p#paraTwo]
+document.querySelector('#demoOld')
+<h1 id=​"demoOld" class=​"borderOne">​Old methods​</h1>​
+document.getElementById('demoOld')
+<h1 id=​"demoOld" class=​"borderOne">​Old methods​</h1>​
+document.querySelectorAll('#demoOld')
+NodeList [h1#demoOld.borderOne]
+document.querySelectorAll('p')
+NodeList(3) [p, p#paraOne.borderOne, p#paraTwo]
+document.querySelectorAll('borderOne')
+NodeList []
+document.querySelectorAll('.borderOne')
+NodeList(3) [h1#demoOld.borderOne, div.borderOne, p#paraOne.borderOne]
+document.querySelector('.borderOne')
+<h1 id=​"demoOld" class=​"borderOne">​Old methods​</h1>​ */
+    </script>
+</body>
+</html>
