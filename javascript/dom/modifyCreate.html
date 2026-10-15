@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+    Create Element and append to webpage
+
+
+    Modifying Elements
+
+    1. Changing Content:
+    2. Changing Attributes:
+    3. Changing Styles:
+
+
+    Event Handling
+"Events allow you to make your webpage interactive, like reacting to a button click or mouse movement."
+👉 Common user events include:
+Mouse events → click, dblclick, mouseover, mouseout
+Keyboard events → keydown, keyup, keypress
+Form events → submit, change, focus, blur
+Window events → load, resize, scroll
+</pre>
+
+    <div id="companyName"></div>
+
+    <button id="changeFormat">Change Context and style</button><br>
+    <img src="../offfBulb.jpeg" alt="" id="bulbImg" style="height: 200px;width: 200px;">
+    <button id="onOffBtn">On / Off</button>
+    <script>
+        bulbImgElmt = document.querySelector("#bulbImg")
+        onOffBtnElmt = document.querySelector("#onOffBtn")
+
+        function toggleBulb(){
+            console.log(bulbImgElmt.getAttribute('src'))
+            if(bulbImgElmt.getAttribute('src') == '../offfBulb.jpeg'){
+                bulbImgElmt.setAttribute('src','../onBulb.jpeg')
+            }else{
+                bulbImgElmt.setAttribute('src','../offfBulb.jpeg')
+            }
+        }
+
+        onOffBtnElmt.addEventListener('click', toggleBulb)
+
+    </script>
+
+<script>
+    divCName = document.querySelector("#companyName")
+
+    h1Elemt = document.createElement('h1')
+    console.log(h1Elemt)
+    cName = document.createTextNode("WISDOM SPROUTS")
+    
+    h1Elemt.appendChild(cName)
+    console.log(h1Elemt)
+
+    h1Elemt.style.color = "#0387A3"
+    h1Elemt.style.textAlign = 'center'
+
+    pElmt = document.createElement('p')
+    pContext = document.createTextNode("sdf sdfgh fghj cvbn dfgh rty 87uyhb cvb tgh vbgn ghj.")
+    pElmt.appendChild(pContext)
+    pElmt.style.backgroundColor = "gray"
+    pElmt.style.color = 'red'
+    pElmt.style.fontSize = '40px'
+    pElmt.style.padding = '5px'
+    pElmt.style.textAlign = 'center'
+
+    divCName.appendChild(h1Elemt)
+    divCName.appendChild(pElmt)
+
+
+    document.querySelector("#changeFormat").addEventListener('click',()=>{
+        h1El = document.querySelector('h1')
+        pEl = document.querySelector('p')
+        h1El.textContent = "Scalefull Technologies"
+        h1El.style.border = '2px ridge #0387A3'
+        h1El.style.textShadow = '2px 2px 3px gray'
+        pEl.textContent = "poiu uyt nbv sdfg ert fgh juk lbnm, zxc sdfg ."
+    })
+</script>
+
+
+
+</body>
+</html>
