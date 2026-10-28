@@ -10,6 +10,13 @@
   <body>
     <h1>RECEIPE MEAL DATA</h1>
 
+    <nav>
+      <input type="text" id="searchKey" oninput="searchByName()" >
+      <button onclick="searchByName()">Search</button>
+      <select name="" id="category" onchange="filterByCategory()"></select>
+      <button onclick="filterByCategory()">Filter</button>
+    </nav>
+
      <!-- Loader -->
         <div id="loader" class="text-center my-5">
             <div class="spinner-border text-primary" role="status">

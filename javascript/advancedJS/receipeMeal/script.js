@@ -1,6 +1,10 @@
 const receipeListElmt = document.querySelector("#receipeList")
 const loaderElmt = document.querySelector("#loader");
 const errorMessageElmt = document.querySelector("#errorMessage");
+const searchKeyElmt = document.querySelector("#searchKey")
+let recArray = []
+let category = []
+const categoryElmt = document.querySelector("#category")
 
 function renderReceipes(receipes) {
     receipeListElmt.innerHTML = receipes.map((rec, i) => `
@@ -112,7 +116,11 @@ async function showRecipeDetails(ID){
 }
 
 
-
+function searchByName(){
+    serachKeyValue = searchKeyElmt.value 
+    filterByName = recArray.filter((m=> m.strMeal.toLowerCase().includes(serachKeyValue.toLowerCase())))
+    renderReceipes(filterByName)
+}
 
 
 
@@ -130,14 +138,28 @@ async function fetchData() {
         .then(data => {
             console.log(data)
             resR = data.meals
+            recArray = resR
             console.log(resR)
+            category = resR.map(m=> m.strCategory)
+            category = [...new Set(category)]
+            renderCategory(category)
+            console.log(category)
             renderReceipes(resR)
         })
         .catch(err => console.log(err))
-
     
          // Hide loader after success or failure
         loaderElmt.classList.add("d-none");
+}
+function renderCategory(cat){
+    categoryElmt.innerHTML = cat.map(v=>`
+        <option value=${v}>${v}</option>
+    `)
+}
+function filterByCategory(){
+        catForFilter = categoryElmt.value
+        filterByCat = recArray.filter(m=> m.strCategory == catForFilter)
+        renderReceipes(filterByCat)
 }
 
 
